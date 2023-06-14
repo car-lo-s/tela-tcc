@@ -1,98 +1,155 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
-header{
-    background-color: #6B8E23;
-    padding: 20px;
-    color: white;
+header {
+  background-color: #6b8e23;
+  padding: 20px;
+  color: white;
 }
-body{
-    background-color: #F2F2F2;
+body {
+  background-color: #f2f2f2;
 }
 
+.visivel{
+    display: flex;
+}
+.nao-visivel{
+    display: none;
+}
 
 /* ARQUIVO HEADER */
 
-.header-login{
-    background-color: white;
-    margin: 70px auto;
-    width: 350px;
-    min-width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    box-shadow: 1px 1px 4px lightslategray;
-    height: 400px;
+.header-login {
+  background-color: white;
+  margin: 70px auto;
+  width: 350px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  box-shadow: 1px 1px 4px lightslategray;
+  height: 400px;
 }
-.header-login form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.header-login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.header-login input{
-    border: none;
+.header-login input {
+  border: none;
 }
-.header-login div{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-bottom: 2px solid black;
+.header-login div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 2px solid black;
 }
-.header-login button{
-    width: 100%;
-    background-color: #6B8E23;
-    color: white;
-    margin-top: 20px;
+.header-login button {
+  width: 100%;
+  background-color: #6b8e23;
+  color: white;
+  margin-top: 20px;
 }
-
 
 /* ARQUIVO HEADER */
 
 /* ARQUIVO HOME */
-.home-modulos{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 350px;
-    margin: 70px auto;
+.home-modulos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  margin: 70px auto;
 }
-.home-modulos div{
-    width: 150px;
-    height: 150px;
-    margin: 10px;
-    /* border: 1px solid black; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 1px 1px 5px lightslategray;
+.home-modulos div {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px lightslategray;
 }
 
 /* ARQUIVO HOME */
 
 /* ARQUIVO ESTOQUE */
-.exemplo{
-    display: none;
+.exemplo {
+  display: none;
 }
-.estoque-cad{
-    height: 100px;
+.estoque-cad {
+  height: 100px;
 }
 
-.tabela button{
-    outline: none;
-    width: 40px;
-    height: 40px;
+.tabela button {
+  outline: none;
+  width: 40px;
+  height: 40px;
 }
-.tabela button img{
+.tabela button img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.informacao {
+  border: 1px solid lightslategray;
+  background-color: white;
+  border-radius: 10px;
+  height: 250px;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.informacao p,.cadastro p{
+    /* background-color: red; */
+    color: red;
+    border-radius: 100%;
     display: flex;
+    /* margin: 5px; */
+    cursor: pointer;
     align-items: center;
     justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+#informacao-texto{
+    margin-top: 10px;
+    margin-left: 30px;
+    color: black;
+}
+.cadastro{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 450px;
+  width: 600px;
+  border: 1px solid black;
+  background-color: white;
+}
+.cadastro form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.cadastro form div{
+  width: 50%;
+}
+.cadastro form button{
+  width: 50%;
 }
 
 /* ARQUIVO ESTOQUE */

@@ -1,71 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-      crossorigin="anonymous"
-    ></script>
-    <title>Estoque</title>
-  </head>
-  <body>
-    <header>AgroTech</header>
-    <section class="exemplo">
-        <table>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Café</td>
-                    <td>200</td>
-                    <td>Carlos</td>
-                    <td><button class="btn btn-info"><img src="./assets/search.svg" alt=""></button></td>
-                    <td><button class="btn btn-primary"><img src="./assets/pencil-square.svg" alt=""></button> <button class="btn btn-danger"><img src="./assets/trash-fill.svg" alt=""></button></td>
-                  </tr>
-            </tbody>
-        </table>
-    </section>
-    <section class="estoque-cad">
-        <p> {...informações aleatorias...}</p>
-        <button class="btn">+ Cadastrar</button>
-    </section>
-    <section class="tabela">
-        <table class="table">
-            <thead class="table-active">
-              <tr>
-                <th scope="col">Codigo</th>
-                <th scope="col">Elemento</th>
-                <th scope="col">Quantidade</th>
-                <th scope="col">Fornecedor</th>
-                <th scope="col">Descrição</th>
-                <th scope="col">Ação</th>
-              </tr>
-            </thead>
-            <tbody>
-                
-            </tbody>
-          </table>
-    </section>
-    <script src="./produtos.js"></script>
-    <script src="./script.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <title>Estoque</title>
+</head>
+
+<body>
+  <header>AgroTech</header>
+  <section class="exemplo">
+    <table>
+      <tbody>
+        <tr class="tag-btn" data-tag="">
+          <th scope="row" class="codigo">1</th>
+          <td class="nome">Café</td>
+          <td class="quantidade">200</td>
+          <td class="tipo"></td>
+          <td class="fornecedor">Carlos</td>
+          <td>
+            <button class="btn btn-info btn-descricao" data-desc=""><img src="./assets/search.svg" alt=""></button>
+          </td>
+          <td>
+            <button class="btn btn-primary"><img src="./assets/pencil-square.svg"
+                alt=""></button> 
+            <button class="btn btn-danger btn-del" data-del=""><img src="./assets/trash-fill.svg"
+                alt=""></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="estoque-cad">
+    <p> {...informações aleatorias...}</p>
+    <button class="btn cadastroEl" onclick="telaCadastrarElement()">+ Cadastrar</button>
+  </section>
+  <section class="tabela">
+    <table class="table">
+      <thead class="table-active">
+        <tr>
+          <th scope="col">Codigo</th>
+          <th scope="col">Elemento</th>
+          <th scope="col">Quantidade</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Fornecedor</th>
+          <th scope="col">Descrição</th>
+          <th scope="col">Ação</th>
+        </tr>
+      </thead>
+      <tbody id="principal">
+
+      </tbody>
+    </table>
+    <div class="informacao  nao-visivel">
+      <p onclick="infoFechar()">
+        X
+      </p>
+      <span id="informacao-texto">
+        teste
+      </span>
+    </div>
+    <div class="cadastro rounded nao-visivel">
+      <p onclick="infoFechar()">X</p>
+      <form>
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" class="form-control" id="nome" placeholder="Nome do elemento">
+        </div>
+        <div class="form-group">
+          <label for="quantidade">Quantidade:</label>
+          <input type="number" class="form-control" id="quantidade" placeholder="Quantidade">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Select de exemplo</label>
+          <select class="form-control" id="tipo">
+            <option value="consumivel">Consumível</option>
+            <option value="nao-consumivel">Não-Consumível</option>
+            
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="fornecedor">Fornecedor:</label>
+          <input type="text" class="form-control" id="fornecedor" placeholder="Fornecedor">
+        </div>
+        
+        <div class="form-group">
+          <label for="descricao">Descrição:</label>
+          <textarea class="form-control" id="descricao" placeholder="Descrição do elemento"></textarea>
+        </div>
+        <button  class="btn btn-primary btn-cadastro" onclick="cadastrarProduto() ">Enviar</button>
+      </form>
+    </div>
+  </section>
+  <!-- <script src="./dado.js"></script> -->
+  <script src="./script.js"></script>
+</body>
+
 </html>
