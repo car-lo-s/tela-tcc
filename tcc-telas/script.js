@@ -45,9 +45,11 @@ var dado = [
 ////////////////////////////////////////////////////////////////////////////////////
 var elementoOriginal = document.querySelector('.exemplo table tbody tr')
 var telaCadastro = document.querySelector('.cadastro')
+var telaAlteracao = document.querySelector('.alteracao')
 var pai = document.querySelector('#principal')
 var cont = 1;
 var produto = {
+    id:'0',
     nome: " ",
     quantidade: "",
     tipo: "",
@@ -55,15 +57,18 @@ var produto = {
     descrição: ""
   };
 ////////////////////////////////////////////////////////////////////////////////////
-dado.map((a)=>{
-    var clone = elementoOriginal.cloneNode(true)
-    clone.querySelector('.codigo').textContent = a.id
-    clone.querySelector('.nome').textContent = a.nome
-    clone.querySelector('.quantidade').textContent = a.quantidade
-    clone.querySelector('.tipo').textContent = a.tipo
-    pai.appendChild(clone)
-    
-})
+function gerar(){
+    dado.map((a)=>{
+        var clone = elementoOriginal.cloneNode(true)
+        clone.querySelector('.codigo').textContent = a.id
+        clone.querySelector('.nome').textContent = a.nome
+        clone.querySelector('.quantidade').textContent = a.quantidade
+        clone.querySelector('.tipo').textContent = a.tipo
+        pai.appendChild(clone)
+        
+    })
+}
+gerar()
 
 
 ////////////////////////////////////////////////////////////////////////////////////
@@ -92,6 +97,8 @@ dado.map((a)=>{
     function infoFechar(){
         telaInformacao.classList.add('nao-visivel')
         telaCadastro.classList.add('nao-visivel')
+        telaAlteracao.classList.add('nao-visivel')
+        
         
     }
 
@@ -144,6 +151,37 @@ function cadastrarProduto(){
     produto.tipo = document.querySelector('#tipo').value
     produto.fornecedor = document.querySelector('#fornecedor').value
     produto.descrição = document.querySelector('#descricao').value
-    console.log(produto)
+    console.log(dado)
     dado.push(produto)
+    var clone = elementoOriginal.cloneNode(true)
+        clone.querySelector('.codigo').textContent = produto.id
+        clone.querySelector('.nome').textContent = produto.nome
+        clone.querySelector('.quantidade').textContent = produto.quantidade
+        clone.querySelector('.tipo').textContent = produto.tipo
+        clone.querySelector('.fornecedor').textContent = produto.fornecedor
+        pai.appendChild(clone)
 }
+////////////////////////////////////////////////////////////////////////////////////
+var alteracaoValor = document.querySelector('.alteracaoValor')
+var Alt = document.querySelectorAll('#principal .btn-alt')
+var contAlt = 1
+Alt.forEach((a)=>{
+    a.dataset.Alt = contAlt++
+})
+function mais(a,b){
+    a = parseFloat(a.textContent)
+    b = parseFloat(b)
+
+    alert(a+b)
+    
+    return 0;
+}
+Alt.forEach((a)=>{
+    a.addEventListener('click',()=>{
+        tag.forEach((b)=>{
+            if(a.dataset.Alt == b.dataset.tag){
+               mais(b.cells[2],alteracaoValor)
+            }
+        })
+    })
+})

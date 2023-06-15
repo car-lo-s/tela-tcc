@@ -35,7 +35,7 @@
             <button class="btn btn-info btn-descricao" data-desc=""><img src="./assets/search.svg" alt=""></button>
           </td>
           <td>
-            <button class="btn btn-primary"><img src="./assets/pencil-square.svg"
+            <button class="btn btn-primary btn-alt" data-del=""><img src="./assets/pencil-square.svg"
                 alt=""></button> 
             <button class="btn btn-danger btn-del" data-del=""><img src="./assets/trash-fill.svg"
                 alt=""></button>
@@ -104,6 +104,14 @@
         </div>
         <button  class="btn btn-primary btn-cadastro" onclick="cadastrarProduto() ">Enviar</button>
       </form>
+    </div>
+    <div class="alteracao rounded ">
+      <section>
+        <div class="menos rounded" onclick="menos()">-</div>
+      <div><input type="number" name="" id="" class="rounded alteracaoValor"></div>
+      <div class="mais rounded" onclick="mais()">+</div>
+      </section>
+      <button class="btn btn-danger " onclick="infoFechar()">Fechar</button>
     </div>
   </section>
   <!-- <script src="./dado.js"></script> -->

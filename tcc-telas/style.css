@@ -15,7 +15,10 @@ body {
     display: flex;
 }
 .nao-visivel{
-    display: none;
+    display: none !important;
+}
+#nao-visivel{
+  display: none;
 }
 
 /* ARQUIVO HEADER */
@@ -151,5 +154,47 @@ body {
 .cadastro form button{
   width: 50%;
 }
+.alteracao{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  padding: 10px 0px 10px 0px;
+  min-height: 70px;  
+}
+.alteracao button{
+  min-width: 70px;
+}
+.alteracao section{
+  height: 60%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+.alteracao div{
+  margin: 5px;
+}
+.alteracao input{
+  border: 1px solid lightslategray;
+}
+.alteracao .menos, .mais{
+  border: 1px solid lightslategray;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* ARQUIVO ESTOQUE */
