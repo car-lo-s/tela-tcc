@@ -168,20 +168,9 @@ var contAlt = 1
 Alt.forEach((a)=>{
     a.dataset.Alt = contAlt++
 })
-function mais(a,b){
-    a = parseFloat(a.textContent)
-    b = parseFloat(b)
 
-    alert(a+b)
-    
-    return 0;
-}
 Alt.forEach((a)=>{
-    a.addEventListener('click',()=>{
-        tag.forEach((b)=>{
-            if(a.dataset.Alt == b.dataset.tag){
-               mais(b.cells[2],alteracaoValor)
-            }
-        })
+    a.addEventListener('click', function(){
+        telaAlteracao.classList.remove('nao-visivel')
     })
 })
