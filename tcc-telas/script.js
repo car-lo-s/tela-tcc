@@ -44,6 +44,7 @@ var dado = [
 
 ////////////////////////////////////////////////////////////////////////////////////
 var elementoOriginal = document.querySelector('.exemplo table tbody tr')
+var tabela = document.querySelector('.tabela table')
 var telaCadastro = document.querySelector('.cadastro')
 var telaAlteracao = document.querySelector('.alteracao')
 var pai = document.querySelector('#principal')
@@ -162,15 +163,36 @@ function cadastrarProduto(){
         pai.appendChild(clone)
 }
 ////////////////////////////////////////////////////////////////////////////////////
-var alteracaoValor = document.querySelector('.alteracaoValor')
+
 var Alt = document.querySelectorAll('#principal .btn-alt')
 var contAlt = 1
+var linhaAlterar;
 Alt.forEach((a)=>{
     a.dataset.Alt = contAlt++
 })
 
 Alt.forEach((a)=>{
     a.addEventListener('click', function(){
+        linhaAlterar = a.dataset.Alt
         telaAlteracao.classList.remove('nao-visivel')
     })
 })
+
+function mais(){
+    var alteracaoValor = document.querySelector('.alteracaoValor')
+    var linha = tabela.rows[linhaAlterar]
+    var celula = linha.cells[2]
+    var conteudo = parseFloat(celula.textContent)
+    alteracaoValor = parseFloat(alteracaoValor.value)
+    celula.textContent = alteracaoValor+conteudo
+}
+function menos(){
+    var alteracaoValor = document.querySelector('.alteracaoValor')
+    var linha = tabela.rows[linhaAlterar]
+    var celula = linha.cells[2]
+    var conteudo = parseFloat(celula.textContent)
+    alteracaoValor = parseFloat(alteracaoValor.value)
+    celula.textContent = conteudo-alteracaoValor
+    
+    // console.log(alteracaoValor-conteudo)
+}
