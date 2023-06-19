@@ -51,28 +51,24 @@
             </div>
         </div>
         <section class="opcaoCompras">
-            <div class="btn-compra">Comprar </div>
-            <div class="btn-compra">Alugar </div>
-            <div class="btn-compra">Anunciar </div>
+            <div class="btn-compra opcao-topo">Comprar </div>
+            <div class="btn-compra opcao-topo">Alugar </div>
+            <div class="btn-compra opcao-topo">Anunciar </div>
         </section>
         <section class="itemCompra">
             <div class="itemSelecao">
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Ordenar por:
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Alguma ação</a>
-                        <a class="dropdown-item" href="#">Outra ação</a>
-                        <a class="dropdown-item" href="#">Alguma coisa aqui</a>
-                    </div>
-                </div>
+                <p>Ordenar por:</p>
+                <select class="form-control ordem">
+                    <!-- <option value="teste">Opcoes:</option> -->
+                    <option value="nome">Nome</option>
+                    <option value="tipo">Tipo</option>
+                    
+                  </select>
             </div>
-            <section class="itemLojaCompra">
-
+            <section class="itemLojaCompra nao-visivel">
 
             </section>
+            <section class="itemLojaAluguel"></section>
         </section>
     </section>
 
