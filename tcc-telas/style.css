@@ -319,5 +319,55 @@ body {
   background-color: lightslategray;
   color: white;
 }
+.itemLojaAnunciar{
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px; 
+}
+.itemLojaAnunciar form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  width: 100%;
+}
+.fechar{
+  color: red;
+  cursor: pointer;
+  padding: 5px;
+}
+
 
 /* ARQUIVO MERCADO */
+
+/* ARQUIVO CHAT */
+
+.chat{
+  width: 900px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+.chatLista{
+  width: 40%;
+  border-right: 1px solid lightslategray;
+  display: flex;
+  flex-direction: column;
+}
+.chatLista div{
+  border-bottom: 1px solid lightslategray;
+  /* background-color: red; */
+  padding: 20px;
+}
+.chatConversa{
+  background-color: red;
+  width: 100%;
+}
+
+
+/* ARQUIVO CHAT */

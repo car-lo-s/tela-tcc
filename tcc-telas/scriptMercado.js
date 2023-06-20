@@ -84,6 +84,7 @@ var dadoAluguel = [
         localizacao:`bela aurora`
     }
 ]
+var itemLojaAnunciarTela = document.querySelector('.itemLojaAnunciar')
 var elementoClone = document.querySelector(`.itemCard`)
 var area = document.querySelector(`.itemLojaCompra`)
 var areaAluguel = document.querySelector(`.itemLojaAluguel`)
@@ -92,6 +93,8 @@ var pesquisar = document.querySelector(`.pesquisar`)
 var ordem  = document.querySelector(`.ordem`)
 const opcaoTopo = document.querySelectorAll('.opcao-topo');
 var apagarElemento
+var fechar = document.querySelector('.itemLojaAnunciar p')
+
 
 dadoCompra.sort(function(a, b) {
     return a.nome.localeCompare(b.nome);
@@ -175,7 +178,9 @@ opcaoTopo.forEach((opcao, index) => {
       // Adiciona a classe 'ativo' apenas na div clicada
       opcao.classList.add('ativo');
       if(index == 0){
+        area.classList.remove('nao-visivel')
         if(ordem.value == `nome`){
+            
             apagarElemento = document.querySelectorAll(`.itemLojaCompra .itemCard`)
             apagarElemento.forEach(a=>{
                 a.remove()
@@ -217,6 +222,8 @@ opcaoTopo.forEach((opcao, index) => {
             })
         }
       }else if(index == 1){
+        area.classList.add('nao-visivel')
+        areaAluguel.classList.remove('nao-visivel')
         if(ordem.value == `nome`){
             apagarElemento = document.querySelectorAll(`.itemLojaAluguel .itemCard`)
             
@@ -261,6 +268,12 @@ opcaoTopo.forEach((opcao, index) => {
                 }
             })
         }
+      }else if(index == 2){
+        itemLojaAnunciarTela.classList.remove('nao-visivel')
       }
     });
   });
+
+  fechar.addEventListener('click', function(){
+    itemLojaAnunciarTela.classList.add('nao-visivel')
+  })

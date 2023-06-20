@@ -65,10 +65,43 @@
                     
                   </select>
             </div>
-            <section class="itemLojaCompra nao-visivel">
+            <section class="itemLojaCompra ">
 
             </section>
-            <section class="itemLojaAluguel"></section>
+            <section class="itemLojaAluguel nao-visivel"></section>
+
+            <section class="itemLojaAnunciar rounded nao-visivel shadow-lg p-3 mb-5 bg-white">
+                <p class="fechar">x</p>
+                <form>
+                    <div class="form-group">
+                      <label for="nome">Nome:</label>
+                      <input type="text" class="form-control" id="nome" placeholder="Nome do elemento">
+                    </div>
+                    <div class="form-group">
+                      <label for="quantidade">Quantidade:</label>
+                      <input type="number" class="form-control" id="quantidade" placeholder="Quantidade">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">Select de exemplo</label>
+                      <select class="form-control" id="tipo">
+                        <option value="consumivel">Consumível</option>
+                        <option value="nao-consumivel">Não-Consumível</option>
+                        
+                      </select>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="fornecedor">Fornecedor:</label>
+                      <input type="text" class="form-control" id="fornecedor" placeholder="Fornecedor">
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="descricao">Descrição:</label>
+                      <textarea class="form-control" id="descricao" placeholder="Descrição do elemento"></textarea>
+                    </div>
+                    <button  class="btn btn-primary btn-cadastro">Cadastrar</button>
+                  </form>
+            </section>
         </section>
     </section>
 
