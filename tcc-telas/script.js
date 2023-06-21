@@ -4,15 +4,15 @@ var dado = [
         nome:'cafe',
         quantidade:'200',
         tipo:'consumivel',
-        fornecedor:'carlos',
-        descricao:'teste1 teste teste teste'
+        fornecedor:'João',
+        descricao:'teste1 teste teste teste '
     },
     {
         id:'2',
         nome:'açucar',
         quantidade:'50',
         tipo:'consumivel',
-        fornecedor:'carlos',
+        fornecedor:'Carlos',
         descricao:'teste2 teste teste teste'
     },
     {
@@ -20,7 +20,7 @@ var dado = [
         nome:'leite',
         quantidade:'2000',
         tipo:'consumivel',
-        fornecedor:'carlos',
+        fornecedor:'José',
         descricao:'teste3 teste teste teste'
     },
     {
@@ -28,7 +28,7 @@ var dado = [
         nome:'trator',
         quantidade:'1',
         tipo:'não-consumivel',
-        fornecedor:'renato',
+        fornecedor:'Robson',
         descricao:'teste4 teste teste teste'
     },
     {
@@ -36,7 +36,7 @@ var dado = [
         nome:'trator',
         quantidade:'1',
         tipo:'não-consumivel',
-        fornecedor:'renato',
+        fornecedor:'Edmundo',
         descricao:'teste4 teste teste teste'
     }
 ]
@@ -63,6 +63,7 @@ function gerar(){
         var clone = elementoOriginal.cloneNode(true)
         clone.querySelector('.codigo').textContent = a.id
         clone.querySelector('.nome').textContent = a.nome
+        clone.querySelector('.fornecedor').textContent = a.fornecedor
         clone.querySelector('.quantidade').textContent = a.quantidade
         clone.querySelector('.tipo').textContent = a.tipo
         pai.appendChild(clone)

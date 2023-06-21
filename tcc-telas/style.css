@@ -217,6 +217,7 @@ body {
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  
 }
 .mercadoPesquisa{
   display: flex;
@@ -260,6 +261,12 @@ body {
 }
 .mercadoChat img{
   width: 40px;
+  margin: 20px;
+
+  margin-top: 52px;
+}
+.mercadoCarrinho img{
+  width: 40px;
   margin: 5px;
 }
 .opcaoCompras{
@@ -294,11 +301,19 @@ body {
   margin-bottom: 15px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin-left: 15px;
-  border-bottom: 1px solid lightslategray;
+  position: relative;
+}
+.itemCard button{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background-color: #6b8e23;
+  color: white;
 }
 .itemFoto{
-  width: 30%;
+  height: 100%;
   background-color: white;
   border-radius: 5px;
 }
@@ -312,7 +327,7 @@ body {
   font-size: 25px;
   margin-left: 15px;
 }
-.itemTipo, .itemPreco{
+.itemTipo, .itemPreco, .itemLocalizacao{
   margin-left: 15px;
 }
 .ativo{
@@ -349,7 +364,7 @@ body {
 .chat{
   width: 900px;
   height: 500px;
-  margin: auto;
+  margin: 20px auto;
   display: flex;
   flex-direction: row;
 }
@@ -364,10 +379,87 @@ body {
   /* background-color: red; */
   padding: 20px;
 }
+.chatLista div{
+  display: flex; 
+  flex-direction: row;
+  cursor: pointer;
+}
+.chatLista div img{
+  margin-right: 10px;
+  width: 25px;
+}
 .chatConversa{
-  background-color: red;
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  display: flex;
+}
+.chatId{
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 15px;
+}
+.chatId a{
+  color: #6b8e23;
+}
+.chatId a:hover{
+  color: black;
+}
+.chatResposta{
+  height: 70%;
+  background-color: #e2e2e2;
+  overflow-x: auto;
 }
 
+.chatTexto{
+  height: 20%;
+}
+.chatComprador{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  
+}
+.chatComprador p{
+  background-color: #6b8e23;
+  padding: 5px 20px;
+  border-radius: 5px 5px 0px;
+  margin-right: 10px;
+  color: white;
+}
+.chatVendedor{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.chatVendedor p{
+  background-color: white;
+  padding: 5px 20px;
+  border-radius: 5px 5px 5px 0px;
+  margin-left: 10px;
+  color: #6b8e23;
+}
+.chatTexto{
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: lightslategray;
+}
+.chatTexto img{
+  width: 40px;
+  cursor: pointer;
+  
+}
+.chatTexto textarea{
+  border: none;
+  outline: none;
+}
+.chatDia{
+  text-align: center;
+  color: lightslategray;
+}
 
 /* ARQUIVO CHAT */

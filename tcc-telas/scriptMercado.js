@@ -6,7 +6,7 @@ var dadoCompra = [
         tipo:'consumivel',
         fornecedor:'carlos',
         descricao:'teste1 teste teste teste',
-        localizacao:`bela aurora`
+        localizacao:`bela aurora`,
     },
     {
         id:'2',
@@ -103,7 +103,7 @@ dadoAluguel.sort(function(a, b) {
     return a.nome.localeCompare(b.nome);
   });
 
-  console.log(dadoAluguel)
+//   console.log(dadoAluguel)
 
   ordem.addEventListener(`change`,function(){
     if (ordem == `nome`){
@@ -117,6 +117,7 @@ dadoCompra.map(a=>{
         var clone = elementoClone.cloneNode(true)
         clone.querySelector(`.itemNome`).textContent = `Produto: `+a.nome
         clone.querySelector(`.itemTipo`).textContent = `Tipo: `+a.tipo
+        clone.querySelector(`.itemLocalizacao`).textContent = `Local: `+a.localizacao
         clone.querySelector(`.itemPreco`).textContent = `Valor: `+a.preco+` R$` 
         area.appendChild(clone)
     
@@ -125,8 +126,9 @@ dadoAluguel.map(a=>{
     var clone = elementoClone.cloneNode(true)
         clone.querySelector(`.itemNome`).textContent = `Produto: `+a.nome
         clone.querySelector(`.itemTipo`).textContent = `Tipo: `+a.tipo
+        clone.querySelector(`.itemLocalizacao`).textContent = `Local: `+a.localizacao
         clone.querySelector(`.itemPreco`).textContent = `Valor: `+a.preco+` R$` 
-        console.log(clone)
+        // console.log(clone)
         areaAluguel.appendChild(clone)
     
 })
@@ -151,6 +153,7 @@ pesquisar.addEventListener(`click`,()=>{
             var clone = elementoClone.cloneNode(true)
             clone.querySelector(`.itemNome`).textContent = `Produto: `+a.nome
             clone.querySelector(`.itemTipo`).textContent = `Tipo: `+a.tipo
+            clone.querySelector(`.itemLocalizacao`).textContent = `Local: `+a.localizacao
             clone.querySelector(`.itemPreco`).textContent = `Valor: `+a.preco+` R$` 
             area.appendChild(clone)
         }
@@ -161,6 +164,7 @@ pesquisar.addEventListener(`click`,()=>{
             var clone = elementoClone.cloneNode(true)
             clone.querySelector(`.itemNome`).textContent = `Produto: `+a.nome
             clone.querySelector(`.itemTipo`).textContent = `Tipo: `+a.tipo
+            clone.querySelector(`.itemLocalizacao`).textContent = `Local: `+a.localizacao
             clone.querySelector(`.itemPreco`).textContent = `Valor: `+a.preco+` R$` 
             areaAluguel.appendChild(clone)
         }
@@ -193,6 +197,7 @@ opcaoTopo.forEach((opcao, index) => {
                 var clone = elementoClone.cloneNode(true)
                 clone.querySelector(`.itemNome`).textContent = `Produto: `+a.nome
                 clone.querySelector(`.itemTipo`).textContent = `Tipo: `+a.tipo
+                clone.querySelector(`.itemLocalizacao`).textContent = `Local: `+a.localizacao
                 clone.querySelector(`.itemPreco`).textContent = `Valor: `+a.preco+` R$` 
                 area.appendChild(clone)
             
@@ -207,6 +212,7 @@ opcaoTopo.forEach((opcao, index) => {
                     var clone = elementoClone.cloneNode(true)
                     clone.querySelector(`.itemNome`).textContent = `Produto: `+a.nome
                     clone.querySelector(`.itemTipo`).textContent = `Tipo: `+a.tipo
+                    clone.querySelector(`.itemLocalizacao`).textContent = `Local: `+a.localizacao
                     clone.querySelector(`.itemPreco`).textContent = `Valor: `+a.preco+` R$` 
                     area.appendChild(clone)
                 }
@@ -216,6 +222,7 @@ opcaoTopo.forEach((opcao, index) => {
                     var clone = elementoClone.cloneNode(true)
                     clone.querySelector(`.itemNome`).textContent = `Produto: `+a.nome
                     clone.querySelector(`.itemTipo`).textContent = `Tipo: `+a.tipo
+                    clone.querySelector(`.itemLocalizacao`).textContent = `Local: `+a.localizacao
                     clone.querySelector(`.itemPreco`).textContent = `Valor: `+a.preco+` R$` 
                     area.appendChild(clone)
                 }
@@ -239,6 +246,7 @@ opcaoTopo.forEach((opcao, index) => {
                 var clone = elementoClone.cloneNode(true)
                 clone.querySelector(`.itemNome`).textContent = `Produto: `+a.nome
                 clone.querySelector(`.itemTipo`).textContent = `Tipo: `+a.tipo
+                clone.querySelector(`.itemLocalizacao`).textContent = `Local: `+a.localizacao
                 clone.querySelector(`.itemPreco`).textContent = `Valor: `+a.preco+` R$` 
                 areaAluguel.appendChild(clone)
             
@@ -254,6 +262,7 @@ opcaoTopo.forEach((opcao, index) => {
                     var clone = elementoClone.cloneNode(true)
                     clone.querySelector(`.itemNome`).textContent = `Produto: `+a.nome
                     clone.querySelector(`.itemTipo`).textContent = `Tipo: `+a.tipo
+                    clone.querySelector(`.itemLocalizacao`).textContent = `Local: `+a.localizacao
                     clone.querySelector(`.itemPreco`).textContent = `Valor: `+a.preco+` R$` 
                     areaAluguel.appendChild(clone)
                 }
@@ -263,6 +272,7 @@ opcaoTopo.forEach((opcao, index) => {
                     var clone = elementoClone.cloneNode(true)
                     clone.querySelector(`.itemNome`).textContent = `Produto: `+a.nome
                     clone.querySelector(`.itemTipo`).textContent = `Tipo: `+a.tipo
+                    clone.querySelector(`.itemLocalizacao`).textContent = `Local: `+a.localizacao
                     clone.querySelector(`.itemPreco`).textContent = `Valor: `+a.preco+` R$` 
                     areaAluguel.appendChild(clone)
                 }
@@ -277,3 +287,5 @@ opcaoTopo.forEach((opcao, index) => {
   fechar.addEventListener('click', function(){
     itemLojaAnunciarTela.classList.add('nao-visivel')
   })
+
+ 

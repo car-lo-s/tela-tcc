@@ -31,16 +31,65 @@
 
   <body>
     <header>AgroTech</header>
-    <section class="chat shadow-lg bg-white">
+    <section class="chat shadow-lg bg-white rounded">
         <div class="chatLista">
-            <div>Pessoa 1</div>
-            <div>Pessoa 2</div>
+            <div>
+              <img src="./assets/person-circle.svg" alt="">
+              <span>Roberto Junior</span>
+            </div>
+            <div>
+              <img src="./assets/person-circle.svg" alt="">
+              <span>Carlos Renato</span>
+            </div>
+            <div>
+              <img src="./assets/person-circle.svg" alt="">
+              <span>Jhon Magacho</span>
+            </div>
+            
         </div>
         <div class="chatConversa">
-            <div class="chatId">Pessoa 1</div>
-            <div class="chatResposta">Conversa</div>
-            <div class="chatTexto">Entrada</div>
-        </div>
+            <div class="chatId">
+              <div class="chatIdNick">
+                <!-- <img src="./assets/person-circle.svg" alt=""> -->
+                <p>Roberto Junior</p>
+              </div>
+              
+              <a href="">Acessar perfil.</a>
+            </div>
+            <div class="chatResposta">
+              <p class="chatDia"> sexta, 23 de jun</p>
+              <div class="chatComprador">
+                <p>oi</p>
+                <p>bom dia</p>
+              </div>
+              <div class="chatVendedor">
+                <p>oi</p>
+                <p>bom dia</p>
+              </div>
+              <div class="chatComprador" id="area">
+                
+              </div>
+              
+            </div>
+            <div class="chatTexto">
+              <textarea name="" id="" cols="60" rows="10" placeholder="Digite uma mensagem"></textarea>
+              <img src="./assets/arrow.svg" alt="" onclick="enviar()">
+            </div>
+        
     </section>
+    <script>
+      var area = document.querySelector('#area');
+      var elemento = document.querySelector('.chatComprador p')
+      var clone = elemento.cloneNode(true)
+      
+      
+      function enviar() {
+        var texto = document.querySelector('textarea')
+      
+        clone.textContent =texto.value
+        area.appendChild(clone)
+        texto.value = ' '
+      }
+    </script>
   </body>
 </html>
