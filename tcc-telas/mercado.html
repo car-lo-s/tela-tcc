@@ -149,8 +149,8 @@
                 <button class="btn">Finalizar compra</button>
             </div>
         </section>
-        <section class="telaCompraFinal">
-            <div class="finalDescricao">
+        <section class="telaCompraFinal shadow-lg bg-white rounded">
+            <div class="finalDescricao border p-3">
                 <div class="metodoPagamento">
 
                     <div class="form-check border">
@@ -181,8 +181,34 @@
                         <label for=""> Salvar dados.</label>
                       </div>
                 </div>
+                <form action="">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputEmail4">Nº do cartão</label>
+                          <input type="text" class="form-control" id="inputEmail4" placeholder="Nº do cartão">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="inputPassword4">Nome impresso no cartão</label>
+                          <input type="password" class="form-control" id="inputPassword4" placeholder="Nome impresso no cartão">
+                        </div>
+                      </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputEmail4">Data de validade</label>
+                          <input type="datetime-local" class="form-control" id="inputEmail4" placeholder="Data de validade">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="inputPassword4">Codigo</label>
+                          <input type="password" class="form-control" id="inputPassword4" placeholder="Codigo">
+                        </div>
+                      </div>
+                </form>
             </div>
-            <div class="finalPagamento">teste</div>
+            <div class="finalPagamento">
+                <h1>Valor: 200,00</h1>
+                <p>Descrição: Item tal tal tal.</p>
+                <button class="btn btn-success btnFinalizar">Finalizar compra</button>
+            </div>
         </section>
     </section>
 
