@@ -35,14 +35,14 @@
                 <p class="itemPreco">teste</p>
                 <p class="itemLocalizacao">teste</p>
                 <p class="itemPreco">Avaliações:
-                <img src="./assets/star-fill.svg" style="cursor:pointer" alt="">
-                <img src="./assets/star-fill.svg" style="cursor:pointer" alt="">
-                <img src="./assets/star-fill.svg" style="cursor:pointer" alt="">
-                <img src="./assets/star-fill.svg" style="cursor:pointer" alt="">
-                <img src="./assets/star-fill.svg" style="cursor:pointer" alt="">
+                    <img src="./assets/star-fill.svg" style="cursor:pointer" alt="">
+                    <img src="./assets/star-fill.svg" style="cursor:pointer" alt="">
+                    <img src="./assets/star-fill.svg" style="cursor:pointer" alt="">
+                    <img src="./assets/star-fill.svg" style="cursor:pointer" alt="">
+                    <img src="./assets/star-fill.svg" style="cursor:pointer" alt="">
                 </p>
             </div>
-            <button class="btn btnCarrinho">Comprar</button>
+            <button class="btn btnCar">Adcionar</button>
         </div>
     </div>
 
@@ -57,9 +57,9 @@
             <div class="mercadoChat">
                 <!-- <p>Chat</p> -->
                 <img src="./assets/chat-dots.svg" alt="">
-                <img src="./assets/cart-check.svg" class="carrinho" alt="" onclick="carrinho()">
+                <img src="./assets/cart-check.svg" class="carrinho" alt="">
             </div>
-           
+
         </div>
         <section class="opcaoCompras">
             <div class="btn-compra opcao-topo">Comprar </div>
@@ -73,46 +73,116 @@
                     <!-- <option value="teste">Opcoes:</option> -->
                     <option value="nome">Nome</option>
                     <option value="tipo">Tipo</option>
-                    
-                  </select>
+
+                </select>
             </div>
             <section class="itemLojaCompra ">
 
             </section>
-            <section class="itemLojaAluguel nao-visivel"></section>
+            <section class="itemLojaAluguel nao-visivel">
+
+            </section>
 
             <section class="itemLojaAnunciar rounded nao-visivel shadow-lg p-3 mb-5 bg-white">
                 <p class="fechar">x</p>
                 <form>
                     <div class="form-group">
-                      <label for="nome">Nome:</label>
-                      <input type="text" class="form-control" id="nome" placeholder="Nome do elemento">
+                        <label for="nome">Nome:</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Nome do elemento">
                     </div>
                     <div class="form-group">
-                      <label for="quantidade">Quantidade:</label>
-                      <input type="number" class="form-control" id="quantidade" placeholder="Quantidade">
+                        <label for="quantidade">Quantidade:</label>
+                        <input type="number" class="form-control" id="quantidade" placeholder="Quantidade">
                     </div>
                     <div class="form-group">
-                      <label for="exampleFormControlSelect1">Select de exemplo</label>
-                      <select class="form-control" id="tipo">
-                        <option value="consumivel">Consumível</option>
-                        <option value="nao-consumivel">Não-Consumível</option>
-                        
-                      </select>
+                        <label for="exampleFormControlSelect1">Select de exemplo</label>
+                        <select class="form-control" id="tipo">
+                            <option value="consumivel">Consumível</option>
+                            <option value="nao-consumivel">Não-Consumível</option>
+
+                        </select>
                     </div>
-                    
+
                     <div class="form-group">
-                      <label for="fornecedor">Fornecedor:</label>
-                      <input type="text" class="form-control" id="fornecedor" placeholder="Fornecedor">
+                        <label for="fornecedor">Fornecedor:</label>
+                        <input type="text" class="form-control" id="fornecedor" placeholder="Fornecedor">
                     </div>
-                    
+
                     <div class="form-group">
-                      <label for="descricao">Descrição:</label>
-                      <textarea class="form-control" id="descricao" placeholder="Descrição do elemento"></textarea>
+                        <label for="descricao">Descrição:</label>
+                        <textarea class="form-control" id="descricao" placeholder="Descrição do elemento"></textarea>
                     </div>
-                    <button  class="btn btn-primary btn-cadastro">Cadastrar</button>
-                  </form>
+                    <button class="btn btn-primary btn-cadastro">Cadastrar</button>
+                </form>
             </section>
+        </section>
+        <section class="telaCompra shadow-lg  bg-white rounded nao-visivel">
+            <p class="telaCompraFechar"
+                style="cursor: pointer; position: absolute; right: 10px; top: 10px; color: red; padding: 5px;">X</p>
+            <img src="https://http2.mlstatic.com/D_NQ_NP_809579-MLB69640191693_052023-O.webp" alt="">
+            <div class="telaCompraDetalhes border rounded ">
+                <h2>Adubo Forth JARDIM </h2>
+                <div>
+                    <p>R$</p>
+                    <p>200,00</p>
+                </div>
+                <p>em 2x de 120,00 R$</p>
+                <div class="telaDetalheQuantidade">
+                    <p>-</p>
+                    <input type="text" class="form-control" name="" id="" value="1">
+                    <p>+</p>
+                </div>
+                <p>Localização: Vale Esperança, ES.</p>
+                <p>Avaliações:
+                    <img src="./assets/star-fill.svg" style="cursor:pointer" alt="">
+                    <img src="./assets/star-fill.svg" style="cursor:pointer" alt="">
+                    <img src="./assets/star-fill.svg" style="cursor:pointer" alt="">
+                    <img src="./assets/star-fill.svg" style="cursor:pointer" alt="">
+                    <img src="./assets/star-fill.svg" style="cursor:pointer" alt="">
+                </p>
+                <p style="text-align: justify;">
+                    It is a long established fact that a reader will be distracted by the readable content of a page
+                    when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution of letters, as opposed to using 'Content here, content here', making it look like
+                    readable English.
+                </p>
+                <button class="btn">Finalizar compra</button>
+            </div>
+        </section>
+        <section class="telaCompraFinal">
+            <div class="finalDescricao">
+                <div class="metodoPagamento">
+
+                    <div class="form-check border">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                            value="opcao1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                            Pix
+                        </label>
+                    </div>
+                    <div class="form-check border">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            value="opcao2" checked>
+                        <label class="form-check-label" for="exampleRadios2">
+                            Cartão de crédito
+                        </label>
+                    </div>
+                    <div class="form-check border">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                            value="opcao3" checked>
+                        <label class="form-check-label" for="exampleRadios3">
+                            Boleto
+                        </label>
+                    </div>
+                </div>
+                <div class="finalDado border-top">
+                    <div class="input-group-text">
+                        <input type="checkbox" aria-label="Chebox para permitir input text">
+                        <label for=""> Salvar dados.</label>
+                      </div>
+                </div>
+            </div>
+            <div class="finalPagamento">teste</div>
         </section>
     </section>
 
