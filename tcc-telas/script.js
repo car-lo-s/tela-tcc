@@ -1,11 +1,11 @@
 var dado = [
     {   
         id:'1',
-        nome:'cafe',
+        nome:'café',
         quantidade:'200',
         tipo:'consumivel',
         fornecedor:'João',
-        descricao:'teste1 teste teste teste '
+        descricao:'O café é uma bebida amplamente consumida em todo o mundo, feita a partir dos grãos torrados da planta Coffea. Ele é apreciado por seu sabor rico e aroma característico. O café é uma das bebidas mais populares e socialmente significativas, sendo consumido tanto por seu efeito estimulante como por seu sabor.'
     },
     {
         id:'2',
@@ -13,7 +13,7 @@ var dado = [
         quantidade:'50',
         tipo:'consumivel',
         fornecedor:'Carlos',
-        descricao:'teste2 teste teste teste'
+        descricao:'O açúcar é uma substância doce amplamente utilizada como adoçante em alimentos e bebidas. É um carboidrato simples, também conhecido como sacarose, composto por glicose e frutose. '
     },
     {
         id:'3',
@@ -21,7 +21,7 @@ var dado = [
         quantidade:'2000',
         tipo:'consumivel',
         fornecedor:'José',
-        descricao:'teste3 teste teste teste'
+        descricao:'O leite é um líquido nutritivo e amplamente consumido em todo o mundo. É um produto alimentar obtido dos mamíferos fêmeas, como vacas, cabras, ovelhas e búfalas, após o parto. O leite é uma fonte de nutrientes essenciais, como proteínas, carboidratos, gorduras, vitaminas e minerais, sendo especialmente rico em cálcio.'
     },
     {
         id:'4',
@@ -29,15 +29,15 @@ var dado = [
         quantidade:'1',
         tipo:'não-consumivel',
         fornecedor:'Robson',
-        descricao:'teste4 teste teste teste'
+        descricao:'Um trator é um veículo motorizado projetado para executar uma variedade de tarefas agrícolas e de construção. Ele é especialmente projetado para fornecer tração e potência para puxar ou empurrar implementos agrícolas pesados, como arados, grades, semeadores, colheitadeiras, entre outros.'
     },
     {
         id:'5',
-        nome:'trator',
+        nome:'caminhão',
         quantidade:'1',
         tipo:'não-consumivel',
         fornecedor:'Edmundo',
-        descricao:'teste4 teste teste teste'
+        descricao:'Um caminhão é um veículo de grande porte projetado para o transporte de cargas. Ele consiste em um chassi robusto, com rodas e um compartimento de carga na parte traseira. Os caminhões são movidos por motores a diesel e geralmente possuem uma cabine na frente para acomodar o motorista e os passageiros.'
     }
 ]
 

@@ -5,8 +5,16 @@
 }
 header {
   background-color: #6b8e23;
-  padding: 20px;
+  /* padding: 5px; */
   color: white;
+  display: flex !important;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+}
+header{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
 }
 body {
   background-color: #f2f2f2;
@@ -23,7 +31,9 @@ body {
 }
 
 /* ARQUIVO HEADER */
-
+header img{
+  width: 100px;
+}
 .header-login {
   background-color: white;
   margin: 70px auto;
@@ -52,13 +62,35 @@ body {
   align-items: center;
   border-bottom: 2px solid black;
 }
-.header-login button {
+.header-login button{
   width: 100%;
   background-color: #6b8e23;
   color: white;
   margin-top: 20px;
 }
-
+.headerRecuperar button {
+  width: 60%;
+  background-color: #6b8e23;
+  color: white;
+  margin-top: 20px;
+}
+.headerRecuperar{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  margin: 70px auto;
+  width: 360px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  box-shadow: 1px 1px 4px lightslategray;
+  height: 500px;
+}
 /* ARQUIVO HEADER */
 
 /* ARQUIVO HOME */
@@ -107,12 +139,15 @@ body {
   border: 1px solid lightslategray;
   background-color: white;
   border-radius: 10px;
-  height: 250px;
+  min-height: 250px;
   width: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 10px;
+  text-align: justify;
+  margin-left: 0px;
 }
 .informacao p,.cadastro p{
     /* background-color: red; */
@@ -128,7 +163,7 @@ body {
 }
 #informacao-texto{
     margin-top: 10px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     color: black;
 }
 .cadastro{
@@ -509,7 +544,7 @@ body {
   outline: none;
 }
 .telaCompraFinal{
-  width: 50%;
+  width: 80%;
   height: 600px;
   position: absolute;
   display: flex;

@@ -30,7 +30,10 @@
   </head>
 
   <body>
-    <header>AgroTech</header>
+    <header>
+      <img src="./assets/33.-Farmer.svg" alt="">
+      <div>AgroTech</div>
+    </header>
     <section class="header-login ">
       <form>
         <p>Sistema Auxiliar</p>
@@ -54,5 +57,31 @@
         <button type="submit" class="btn">Acessar</button>
       </form>
     </section>
+    <section class="headerRecuperar nao-visivel">
+      <p>Recuperar senha.</p>
+        <div class="form-group">
+            <!-- <img src="./assets/person.svg" alt=""> -->
+          <input
+            type="email"
+            class="form-control shadow-none"
+            placeholder="Email cadastrado."
+          />
+        </div>
+        <div class="form-group">
+            <!-- <img src="./assets/lock.svg" alt=""> -->
+          <input
+            type="password"
+            class="form-control shadow-none"
+            placeholder="Data de nascimento."
+          />
+        </div>
+        <button type="submit" class="btn">Enviar</button>
+    </section>
+    <script>
+      var headerBtn = document.querySelector('.headerRecuperar button');
+      headerBtn.addEventListener('click', function(){
+        alert("F")
+      })
+    </script>
   </body>
 </html>
