@@ -10,6 +10,7 @@
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
+    
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
       integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -34,14 +35,20 @@
       <img src="./assets/33.-Farmer.svg" alt="">
       <div>AgroTech</div>
     </header>
+    <div class="alert alert-info alerta nao-visivel" role="alert" id="alerta">
+      Email enviado com sucesso!
+    </div>
+    <div class="alert alert-danger nao-visivel" role="alert" id="alertaErro">
+      Email ou senha incorreta, tente novamente.
+    </div>
     <section class="header-login ">
       <form>
         <p>Sistema Auxiliar</p>
         <div class="form-group">
             <img src="./assets/person.svg" alt="">
           <input
-            type="email"
-            class="form-control shadow-none"
+            type="text"
+            class="form-control shadow-none nomeInput"
             placeholder="Seu email"
           />
         </div>
@@ -49,12 +56,12 @@
             <img src="./assets/lock.svg" alt="">
           <input
             type="password"
-            class="form-control shadow-none"
+            class="form-control shadow-none senhaInput"
             placeholder="Senha"
           />
         </div>
-        <a href="">Esqueci a senha.</a>
-        <button type="submit" class="btn">Acessar</button>
+        <a href="" class="recuperacaoSenha">Esqueci a senha.</a>
+        <button  class="btn btnAcessar">Acessar</button>
       </form>
     </section>
     <section class="headerRecuperar nao-visivel">
@@ -70,18 +77,86 @@
         <div class="form-group">
             <!-- <img src="./assets/lock.svg" alt=""> -->
           <input
-            type="password"
+            type="date"
             class="form-control shadow-none"
             placeholder="Data de nascimento."
           />
         </div>
-        <button type="submit" class="btn">Enviar</button>
+        <button type="submit" class="btn btnEnviar">Enviar</button>
     </section>
+    <footer>
+      <div>Carlos / Jhonantan</div>
+
+    </footer>
+    <div class="carregamento nao-visivel">
+      <div class="c-loader"></div>
+    </div>
     <script>
-      var headerBtn = document.querySelector('.headerRecuperar button');
-      headerBtn.addEventListener('click', function(){
-        alert("F")
+      var nomeCerto = `carlosrenato-24`
+      var senhaCerto = `carlos123456789`
+      var nomeInput = document.querySelector(`.nomeInput`)
+      var senhaInput = document.querySelector(`.senhaInput`)
+      var recuperacaoSenha = document.querySelector(`.recuperacaoSenha`)
+      var telaLogin = document.querySelector(`.header-login`)
+      var telaRecuperacao = document.querySelector(`.headerRecuperar`)
+      var btnEnviar = document.querySelector(`.btnEnviar`)
+      var btnAcessar = document.querySelector(`.btnAcessar`)
+      var animacaoCarregamento = document.querySelector(`.carregamento`)
+      var alerta = document.querySelector(`.alerta`)
+      var alertaErro = document.querySelector(`#alertaErro`)
+
+      recuperacaoSenha.addEventListener('click', function(event){
+        event.preventDefault()
+        telaRecuperacao.classList.remove(`nao-visivel`)
+        telaLogin.classList.add(`nao-visivel`)
       })
+      btnEnviar.addEventListener(`click`,()=>{
+        animacaoCarregamento.classList.remove(`nao-visivel`)
+        setTimeout(function(){
+          animacaoCarregamento.classList.add(`nao-visivel`)
+          telaLogin.classList.remove(`nao-visivel`)
+          telaRecuperacao.classList.add(`nao-visivel`)
+          alerta.classList.remove(`nao-visivel`)
+          alerta.classList.add(`fade-in`)
+          if(!alerta.classList.contains(`nao-visivel`)){
+            setTimeout(()=>{
+              alerta.classList.remove(`fade-in`)
+              alerta.classList.add(`fade-out`)
+              // alerta.classList.add(`nao-visivel`)
+            },2000)
+          }
+        },2000)
+        
+      })
+      
+
+
+      btnAcessar.addEventListener(`click`,(a)=>{
+        a.preventDefault()
+        if(nomeCerto == nomeInput.value && senhaCerto == senhaInput.value){
+          animacaoCarregamento.classList.remove(`nao-visivel`)
+          animacaoCarregamento.classList.add(`fade-in`)
+          setTimeout(() => {
+            window.location.href = "home.html"
+          }, 2000);
+        }else{
+          nomeInput.value = ``
+          senhaInput.value = `` 
+          alertaErro.classList.remove(`nao-visivel`)
+          alertaErro.classList.add(`fade-in`)
+          setTimeout(()=>{
+           alertaErro.classList.remove('fade-in')
+           alertaErro.classList.add('fade-out')
+          setTimeout(()=>{
+            alertaErro.classList.add(`nao-visivel`)
+            alertaErro.classList.remove(`fade-out`)
+          },1000)
+            
+          },2000)
+          
+        }
+      })
+      
     </script>
   </body>
 </html>

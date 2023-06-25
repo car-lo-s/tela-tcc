@@ -3,6 +3,112 @@
   margin: 0;
   box-sizing: border-box !important;
 }
+/* ANIMACAO */
+.c-loader {
+  border: 6px solid #e5e5e5;
+  border-top-color: #51d4db;
+  height: 50px;
+  width: 50px;
+}
+.c-loader {
+  border: 6px solid #e5e5e5;
+  border-top-color: #51d4db;
+  height: 50px;
+  width: 50px;
+}
+.c-loader {
+  animation: is-rotating 1s infinite;
+  border: 10px solid #e5e5e5;
+  border-radius: 50%;
+  border-top-color: #6b8e23;
+  height: 70px;
+  width: 70px;
+}
+.fade-in {
+  opacity: 0;
+  animation-name: fadeInAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-out {
+  opacity: 1;
+  animation-name: fadeOutAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.elemento {
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  transition-delay: 0.1s;
+}
+
+.elemento:hover {
+  opacity: 0.6;
+}
+
+.carregamento{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  z-index: 999;
+}
+#alerta{
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#alertaErro{
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.btnRetornar{
+  background-color: #6b8e23;
+  color: white;
+  margin: 10px;
+}
+
+/* ANIMACAO */
 header {
   background-color: #6b8e23;
   /* padding: 5px; */
@@ -11,6 +117,7 @@ header {
   flex-direction: row;
   /* justify-content: center; */
   align-items: center;
+  font-family: 'Roboto', sans-serif;
 }
 header{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -19,7 +126,19 @@ header{
 body {
   background-color: #f2f2f2;
 }
-
+footer{
+  background-color: #6b8e23;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-weight: bolder;
+}
 .visivel{
     display: flex;
 }
@@ -46,6 +165,7 @@ header img{
   align-items: center;
   box-shadow: 1px 1px 4px lightslategray;
   height: 400px;
+
 }
 .header-login form {
   display: flex;
@@ -75,13 +195,9 @@ header img{
   margin-top: 20px;
 }
 .headerRecuperar{
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color: white;
   margin: 70px auto;
-  width: 360px;
+  width: 350px;
   min-width: 300px;
   display: flex;
   flex-direction: column;
@@ -89,7 +205,7 @@ header img{
   text-align: center;
   align-items: center;
   box-shadow: 1px 1px 4px lightslategray;
-  height: 500px;
+  height: 400px;
 }
 /* ARQUIVO HEADER */
 
@@ -120,6 +236,11 @@ header img{
 /* ARQUIVO ESTOQUE */
 .exemplo {
   display: none;
+}
+.cadastroEl{
+  margin: 10px;
+  border: 1px solid #6b8e23 !important; 
+  color: #6b8e23;
 }
 .estoque-cad {
   height: 100px;
@@ -283,7 +404,7 @@ header img{
   cursor: pointer;
 }
 .mercadoPesquisa img{
-  width: 50%;
+  width: 40%;
 }
 .mercadoChat{
   display: flex;
@@ -332,7 +453,7 @@ header img{
 }
 .itemCard{
   width: 70%;
-  height: 200px;
+  height: 300px;
   margin-bottom: 15px;
   display: flex;
   flex-direction: row;
@@ -348,14 +469,28 @@ header img{
   color: white;
 }
 .itemFoto{
-  height: 100%;
+  height: 90%;
   background-color: white;
   border-radius: 5px;
+  width: 30%;
+  
+}
+.itemFornecedor{
+  margin-left: 15px;
+}
+.itemFornecedor a{
+  color: #6b8e23 !important;
+  background-color: red;
 }
 .itemFoto img{
- width: 100%;
- height: 95%;
+ width: 90%;
+ height: 90%;
  border-radius: 5px;
+}
+.itemDescricao{
+  width: 70%;
+  height: 100%;
+  /* background-color: red; */
 }
 .itemNome{
   font-weight: bolder;
@@ -390,7 +525,26 @@ header img{
   cursor: pointer;
   padding: 5px;
 }
+.telaCompraFecharFinal{
+  color: red;
+  padding: 5px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 1;
+}
+.fornecedorDado{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 600px;
+  height: 600px;
+  
 
+}
 
 /* ARQUIVO MERCADO */
 

@@ -34,6 +34,7 @@
       <img src="./assets/33.-Farmer.svg" alt="">
       <div>AgroTech</div>
     </header>
+    <button class="btn btnRetornar elemento" onclick="btnRetorno()">Voltar</button>
     <section class="chat shadow-lg bg-white rounded">
         <div class="chatLista">
             <div>
@@ -79,8 +80,19 @@
               <img src="./assets/arrow.svg" alt="" onclick="enviar()">
             </div>
         
+            <div class="carregamento nao-visivel">
+              <div class="c-loader"></div>
+            </div>
     </section>
     <script>
+      var carregamento = document.querySelector(`.carregamento`)
+      function btnRetorno(){
+      carregamento.classList.add(`fade-in`)
+      carregamento.classList.remove(`nao-visivel`)
+      setTimeout(() => {
+        window.location.href= `home.html`
+      }, 1500);
+    }
       var area = document.querySelector('#area');
       var elemento = document.querySelector('.chatComprador p')
       var clone = elemento.cloneNode(true)

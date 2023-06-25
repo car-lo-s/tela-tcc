@@ -144,7 +144,7 @@ ordem.addEventListener(`change`, function () {
   }
 });
 
-dadoCompra.map((a) => {
+dadoSafra.map((a) => {
   var clone = elementoClone.cloneNode(true);
   clone.querySelector(`.itemNome`).textContent = `Produto: ` + a.nome;
   clone.querySelector(`.itemFornecedor`).textContent = `Fornecedor: ` + a.fornecedor;

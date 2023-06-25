@@ -87,6 +87,7 @@ gerar()
             dado.map((b)=>{
                 if(a.dataset.desc == b.id){
                     if(telaInformacao.classList.contains('nao-visivel')){
+                        telaInformacao.classList.add(`fade-in`)
                         telaInformacao.classList.remove('nao-visivel')
                         telaInformacao.querySelector('#informacao-texto').textContent= b.descricao
                     }
@@ -96,13 +97,13 @@ gerar()
     })
 ////////////////////////////////////////////////////////////////////////////////////
     
-    function infoFechar(){
-        telaInformacao.classList.add('nao-visivel')
-        telaCadastro.classList.add('nao-visivel')
-        telaAlteracao.classList.add('nao-visivel')
+    // function infoFechar(){
+    //     telaInformacao.classList.add('nao-visivel')
+    //     telaCadastro.classList.add('nao-visivel')
+    //     telaAlteracao.classList.add('nao-visivel')
+    //     document.querySelector(`.cadastro`).classList.add(`fade-out`)
         
-        
-    }
+    // }
 
 ////////////////////////////////////////////////////////////////////////////////////
     
@@ -130,7 +131,10 @@ btnDel.forEach((a)=>{
     a.addEventListener('click',()=>{
         tag.forEach((b)=>{
             if(a.dataset.del == b.dataset.tag){
-                b.remove()
+                b.classList.add(`fade-out`)
+                setTimeout(() => {
+                    b.remove()
+                }, 500);
             }
         })
     })
@@ -161,7 +165,11 @@ function cadastrarProduto(){
         clone.querySelector('.quantidade').textContent = produto.quantidade
         clone.querySelector('.tipo').textContent = produto.tipo
         clone.querySelector('.fornecedor').textContent = produto.fornecedor
-        pai.appendChild(clone)
+        document.querySelector(`.carregamento`).classList.remove(`nao-visivel`)
+        setTimeout(() => {
+            pai.appendChild(clone)
+            document.querySelector(`.carregamento`).classList.add(`nao-visivel`)
+        }, 700);
 }
 ////////////////////////////////////////////////////////////////////////////////////
 

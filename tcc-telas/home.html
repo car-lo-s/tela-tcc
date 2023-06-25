@@ -30,12 +30,64 @@
   </head>
 
   <body>
-    <header>AgroTech</header>
+    <header>
+      <img src="./assets/33.-Farmer.svg" alt="">
+      <div>AgroTech</div>
+    </header>
     <section class="home-modulos">
-        <div class="rounded" >Estoque</div>
-        <div class="rounded">Mercado</div>
-        <div class="rounded">Teste</div>
-        <div class="rounded">Teste</div>
+        <div class="rounded elemento estoque" >Estoque</div>
+        <div class="rounded elemento mercado">Mercado</div>
+        <div class="rounded elemento safraFutura">Safra futura</div>
+        <div class="rounded elemento" onclick="sairFN()">Sair</div>
     </section>
+    <div class="carregamento nao-visivel">
+      <div class="c-loader"></div>
+    </div>
+    <footer>
+      <div>Carlos / Jhonantan</div>
+
+    </footer>
+    <script>
+      var elementoEstoque = document.querySelector(`.estoque`)
+      var elementoSafra = document.querySelector(`.safraFutura`)
+      var elementoMercado = document.querySelector(`.mercado`)
+      var elementoEstoque = document.querySelector(`.estoque`)
+      var carregamento = document.querySelector(`.carregamento`)
+      elementoEstoque.addEventListener(`click`,()=>{
+        carregamento.classList.add(`fade-in`)
+        carregamento.classList.remove(`nao-visivel`)
+        setTimeout(() => {
+          window.location.href = `estoque.html`
+        }, 1500);
+      })
+      elementoMercado.addEventListener(`click`,()=>{
+        carregamento.classList.add(`fade-in`)
+        carregamento.classList.remove(`nao-visivel`)
+        setTimeout(() => {
+          window.location.href = `mercado.html`
+        }, 1500);
+      })
+      elementoEstoque.addEventListener(`click`,()=>{
+        carregamento.classList.add(`fade-in`)
+        carregamento.classList.remove(`nao-visivel`)
+        setTimeout(() => {
+          window.location.href = `estoque.html`
+        }, 1500);
+      })
+      elementoSafra.addEventListener(`click`,()=>{
+        carregamento.classList.add(`fade-in`)
+        carregamento.classList.remove(`nao-visivel`)
+        setTimeout(() => {
+          window.location.href = `safraFutura.html`
+        }, 1500);
+      })
+      function sairFN(){
+        carregamento.classList.add(`fade-in`)
+        carregamento.classList.remove(`nao-visivel`)
+        setTimeout(() => {
+          window.location.href = `index.html`
+        }, 1500);
+      }
+    </script>
   </body>
 </html>
